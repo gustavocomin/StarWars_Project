@@ -22,10 +22,10 @@ const Main = () => {
           <li><Link to="/list/films">Listar Filmes</Link></li>
         </List>
         ) : (
-          <>Preparando Salto em Hipe-Esaço
+          <h1>Preparando Salto no hiperespaço
 
             <img src={Spinner} alt=""/>
-          </>
+          </h1>
       )}
 
     </Container>
