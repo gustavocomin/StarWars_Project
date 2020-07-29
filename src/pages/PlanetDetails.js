@@ -6,12 +6,12 @@ import { Link, useParams, useHistory } from "react-router-dom";
 
 const PlanetDetails = () => {
 
+  const { planets = {}, people = {}, films = {} } = useContext(StarWarsContext);
   let home     = useHistory();
   let history  = useHistory();
   const { id } = useParams();
   const planet = planets[id] || {};
 
-  const { planets = {}, people = {}, films = {} } = useContext(StarWarsContext);
 
   function handleClick() {
     home.push("/");
@@ -62,7 +62,7 @@ const PlanetDetails = () => {
 
         <dt>População</dt>
         <dd>{Number(planet.population).toLocaleString()}</dd>
-        
+
       </DefinitionList>
     </Container>
   );

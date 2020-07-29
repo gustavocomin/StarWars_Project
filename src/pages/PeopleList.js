@@ -5,9 +5,10 @@ import { List }                           from './Main/styles.js';
 import { Link, useHistory }               from 'react-router-dom';
 
 const PeopleList = () => {
+
+    const { people }                = useContext(StarWarsContext)
     let history                     = useHistory();
     let home                        = useHistory();
-    const { people }                = useContext(StarWarsContext)
     const [GenderSearch, setGender] = useState();
     const [nameSearch, setname]     = useState("");
 

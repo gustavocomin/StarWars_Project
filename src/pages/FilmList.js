@@ -6,9 +6,9 @@ import { Link, useHistory }              from 'react-router-dom';
 
 const FilmList = () => {
 
+  const {films }                     = useContext(StarWarsContext)
   let history                        = useHistory();
   let home                           = useHistory();
-  const {films }                     = useContext(StarWarsContext)
   const [titleSearch, setTitle]      = useState("");
   const [releaseYearSearch, setYear] = useState();
 

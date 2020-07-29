@@ -6,12 +6,12 @@ import { Link, useParams, useHistory } from "react-router-dom";
 
 const FilmDetails = () => {
 
+  const { planets = {}, films = {}, people = {} } = useContext(StarWarsContext);
   let history  = useHistory();
   let home     = useHistory();
   const { id } = useParams();
   const   film = films[id] || {};
 
-  const { planets = {}, films = {}, people = {} } = useContext(StarWarsContext);
 
   function handleClick() {
     home.push("/");

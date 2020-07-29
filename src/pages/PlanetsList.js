@@ -5,9 +5,10 @@ import { List }                          from './Main/styles.js';
 import { Link, useHistory }              from 'react-router-dom';
 
 const PlanetsList = () => {
+
+    const {planets ={} }              = useContext(StarWarsContext)
     let    history                    = useHistory();
     let    home                       = useHistory();
-    const {planets ={} }              = useContext(StarWarsContext)
     const [nameSearch,    setname]    = useState("");
     const [popSearch,     setpop]     = useState();
     const [ClimateSearch, setclimate] = useState("");
